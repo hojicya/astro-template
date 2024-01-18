@@ -1,4 +1,6 @@
 ---
+// import { Image } from "astro:assets";
+import myImage from "@assets/animal/cat.jpg";
 interface Props {
   title: string;
   body: string;
@@ -14,12 +16,19 @@ const { href, title, body } = Astro.props;
       {title}
       <span>&rarr;</span>
     </h2>
+    <!-- <Image src={myImage} alt="画像の説明。" /> -->
+    <img src={myImage.src} alt="画像の説明。" />
+
     <p>
       {body}
     </p>
   </a>
 </li>
 <style lang="scss" scoped>
+  img {
+    width: 100px;
+    height: 200px;
+  }
   .link-card {
     list-style: none;
     display: flex;
