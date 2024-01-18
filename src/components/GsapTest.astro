@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="box"></div>
+</div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".box", {
+    x: 100, // 100px右に移動
+    scrollTrigger: {
+      trigger: ".box", // アニメーション開始のトリガー要素
+      start: "top center", // アニメーション開始位置
+    },
+  });
+  const sum = (a, b) => a + b;
+  // 例: CLIターミナルに "4 "を出力する。
+  console.log(sum(2, 2));
+</script>
+<!-- <script src="../assets/a.js"></script> -->
+
+<style>
+  .container {
+  }
+  .box {
+    background-color: #1cb4d3;
+    height: 100px;
+    width: 100px;
+  }
+</style>
