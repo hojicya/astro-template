@@ -21,7 +21,7 @@ export default {
     show: function () {
       alert(this.text);
     },
-    chanege: function () {
+    change: function () {
       this.text = "test!!!";
     },
   },

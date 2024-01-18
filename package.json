@@ -17,7 +17,14 @@
     "vue": "^3.4.14"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
     "prettier": "^3.2.4",
     "prettier-plugin-astro": "^0.12.3"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 5%",
+    "ie >= 11"
+  ]
 }
