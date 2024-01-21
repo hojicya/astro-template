@@ -1,21 +1,7 @@
+@charset "utf-8";
 @use "./_variables" as *;
 @use "./_mixin" as *;
 
-p {
-  color: $red;
-}
-
-:root {
-  --accent: 136, 58, 234;
-  --accent-light: 224, 204, 250;
-  --accent-dark: 49, 10, 101;
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(var(--accent)),
-    rgb(var(--accent-light)) 30%,
-    white 60%
-  );
-}
 html {
   font-family: system-ui, sans-serif;
   background: #13151a;
@@ -37,3 +23,31 @@ body {
   background-image: url("/src/assets/animal/cat.jpg");
   background-size: contain;
 }
+
+a {
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/*================================
+  assets
+=================================*/
+.display--none {
+  display: none;
+}
+
+// .display--pc {
+//   display: block;
+//   @media screen and (max-width: $breakpoint-base) {
+//     display: none;
+//   }
+// }
+
+// .display--sp {
+//   display: none;
+//   @media screen and (max-width: $breakpoint-base) {
+//     display: block;
+//   }
+// }

@@ -1,2 +1,39 @@
+@charset "utf-8";
+/*================================
+  color
+=================================*/
+$colorBlack: #000;
+$colorWhite: #fff;
 $blue: #0074d9;
 $red: red;
+
+/*================================
+  breakpoint
+=================================*/
+$breakpoints: (
+  "xs": "screen and (max-width: 320px)",
+  "sm": "screen and (max-width: 428px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1080px)",
+  "xl": "screen and (max-width: 1440px)",
+) !default;
+$breakpoints_r: (
+  "xs": "screen and (min-width: 321px)",
+  "sm": "screen and (min-width: 429px)",
+  "md": "screen and (min-width: 769px)",
+  "lg": "screen and (min-width: 1081px)",
+  "xl": "screen and (min-width: 1441px)",
+) !default;
+// $breakpoint-pc: 1280px;
+// $breakpoint-base: 980px;
+// $breakpoint-middle: 768px; //spレイアウト
+// $breakpoint-small: 640px;
+// $breakpoint-mini: 450px;
+// $breakpoint-content: 750px;
+
+/*================================
+  font
+=================================*/
+$font: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium",
+  "游ゴシック", "Yu Gothic", sans-serif;
+$font-en: "Helvetica", "Arial", sans-serif;
