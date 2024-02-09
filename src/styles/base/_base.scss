@@ -2,23 +2,6 @@
 @use "./_variables" as *;
 @use "./_mixin" as *;
 
-html {
-  font-family: system-ui, sans-serif;
-  background: #13151a;
-  background-size: 224px;
-}
-code {
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace;
-}
-
 body {
   background-image: url("/src/assets/animal/cat.jpg");
   background-size: contain;
@@ -30,24 +13,3 @@ a {
     opacity: 0.7;
   }
 }
-
-/*================================
-  assets
-=================================*/
-.display--none {
-  display: none;
-}
-
-// .display--pc {
-//   display: block;
-//   @media screen and (max-width: $breakpoint-base) {
-//     display: none;
-//   }
-// }
-
-// .display--sp {
-//   display: none;
-//   @media screen and (max-width: $breakpoint-base) {
-//     display: block;
-//   }
-// }
