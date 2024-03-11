@@ -10,6 +10,7 @@ $colorWhite: #fff;
 =================================*/
 $breakpoints: (
   "sp": "screen and (max-width: 750px)",
+  "sp-tab": "screen and (max-width: 1279px)",
   "tab": "screen and (min-width: 751px) and (max-width: 1279px)",
   "tab-pc": "screen and (min-width: 751px)",
   "pc": "screen and (min-width: 1280px)",

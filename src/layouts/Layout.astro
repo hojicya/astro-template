@@ -1,24 +1,41 @@
 ---
 import "../styles/global.scss";
 
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+const { title, description, url = "" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <!-- <meta property="og:image" content=`${url}assets/images/ogp.jpg` /> -->
+    <meta property="og:site_name" content="" />
+
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:card" content="summary" />
+    <!-- OGP end -->
   </head>
   <body>
     <slot />
+
+    <script
+      is:inline
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
   </body>
 </html>

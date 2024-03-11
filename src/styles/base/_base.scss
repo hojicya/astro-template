@@ -3,13 +3,34 @@
 @use "./_mixin" as *;
 
 body {
-  background-image: url("/src/assets/animal/cat.jpg");
-  background-size: contain;
+  font-family: $font;
 }
 
-a {
-  transition: all 0.3s;
-  &:hover {
-    opacity: 0.7;
+@include mq(pc) {
+  a {
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.container {
+  @include mq() {
+  }
+}
+
+.display {
+  &-sp {
+    display: none;
+    @include mq() {
+      display: block;
+    }
+  }
+  &-pc {
+    display: block;
+    @include mq() {
+      display: none;
+    }
   }
 }
