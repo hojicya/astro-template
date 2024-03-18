@@ -1,22 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
 import GsapTest from "../components/GsapTest.astro";
 import VueTest from "../components/VueTest.vue";
 ---
 
 <Layout title="" description="">
   <main>
-    <a href="/sample">sample</a>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <h1>Welcome to Astro</h1>
+
+    <h2>component test</h2>
     <GsapTest />
     <VueTest client:load />
-
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
   </main>
 </Layout>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  h2 {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>

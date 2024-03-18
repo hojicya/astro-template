@@ -1,13 +1,11 @@
 <template>
   <div class="container">
-    <div class="row mt-3">
-      <input type="test" v-model="text" class="form-control-inline col-6" />
-      <div class="col-5">
-        <button @click="show()" class="btn btn-primary">show</button>
-        <button @click="change()" class="btn btn-success">change</button>
-      </div>
-      <div class="alert alert-info mt-3">{{ text }}</div>
+    <input type="test" v-model="text" />
+    <div>
+      <button @click="show()" class="btn btn-primary">show</button>
+      <button @click="change()" class="btn btn-success">change</button>
     </div>
+    <div class="text">{{ text }}</div>
   </div>
 </template>
 <script>
@@ -22,10 +20,29 @@ export default {
       alert(this.text);
     },
     change: function () {
-      this.text = "test!!!";
+      this.text = "change";
     },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  margin: 40px;
+}
+input {
+  border: 1px solid #000;
+}
+
+button {
+  padding: 4px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.text {
+  margin-top: 10px;
+  color: #3f3f3f;
+  font-size: 14px;
+}
+</style>
